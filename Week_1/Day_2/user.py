@@ -26,7 +26,6 @@ class user:
 
 user1 = user('Diego', 'Gonzalez', 'diego123456789@gmail.com', 29, 'False', 200)
 user2 = user('Briona', 'Taylor', 'briona123456789@gmail.com', 24, 'False', 400)
-user3 = user('Crystal', 'Gonzalez', 'crystal123456789@gmail.com', 21, 'True', 100)
 
 
 user1.enroll()
