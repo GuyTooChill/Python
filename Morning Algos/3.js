@@ -30,7 +30,6 @@
      * @returns {string} The given string encoded.
      */
     function encodeStr(str) {
-        // code here
         var newStr = "";
         var count = 1;
         if(str == ""){
