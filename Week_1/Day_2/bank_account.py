@@ -1,12 +1,31 @@
 class BankAccount:
-    # don't forget to add some default values for these parameters!
-    def __init__(self, int_rate, balance): 
-        pass
+
+    def __init__(self, int_rate = 0.01, balance = 0): 
+        self.int_rate = int_rate
+        self.balance = balance
+
     def deposit(self, amount):
-        pass
+        self.balance += amount
+        return self
+
     def withdraw(self, amount):
-        pass
+        if self.balance >= amount:
+            self.balance -= amount
+        return self
+
     def display_account_info(self):
-        pass
+        print(f'Interest Rate : {self.int_rate}\nBalance : {self.balance}')
+        return self
+
     def yield_interest(self):
-        pass
+        if self.balance > 0:
+            self.balance += self.balance * 0.01
+        return self
+
+
+account1 = BankAccount()
+account2 = BankAccount()
+
+account1.deposit(amount=100).deposit(amount=100).deposit(amount=100).withdraw(amount=100).yield_interest().display_account_info()
+
+account2.deposit(amount=100).deposit(amount=500).withdraw(amount=50).withdraw(amount=50).withdraw(amount=50).withdraw(amount=50).yield_interest().display_account_info()
