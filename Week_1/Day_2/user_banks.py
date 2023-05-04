@@ -53,6 +53,6 @@ user2 = user('Briona', 'briona123456789@gmail.com')
 
 
 
-user1.make_deposit(amount=500)
+user1.make_deposit(amount=1000)
 user1.make_withdraw(amount=200)
 user1.display_account_info()
