@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
     <title>Playground</title>
+    <style>
+        .box{
+            background-color: {{bg_color}}
+        }
+    </style>
 </head>
 
 <body>
@@ -13,6 +18,14 @@
     <H1>Welcome!</H1>
 
 
+
+<div class="container">
+    {% for x in range(0, times): %}
+        <div class="box">
+            <p></p>
+        </div>
+    {%  endfor %}
+</div>
 
     <script src="{{ url_for('static', filename='script.js')}}"></script>
 </body>
