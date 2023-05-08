@@ -11,7 +11,11 @@ def counter():
 @app.route('/refresh', methods=['POST'])
 def refresh():
     session['views'] = request.form['views']
-    return redirect('/')
+    return redirect('/display')
+
+# @app.route('/display')
+# def counter():
+#     return render_template('index_display.html')
 
 @app.route('/destroy_session')
 def destroy():
