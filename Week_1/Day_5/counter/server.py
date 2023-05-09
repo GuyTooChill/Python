@@ -5,20 +5,15 @@ app.secret_key = 'keep it secret, keep it safe' # set a secret key for security 
 
 @app.route('/')          # The "@" decorator associates this route with the function immediately following
 def counter():
+    if "views" in session:
+        session["views"] += 1
+    else:
+        session["views"] = 1
     return render_template('index.html')  # Return the string 'Hello World!' as a response
 
-
-@app.route('/refresh', methods=['POST'])
-def refresh():
-    session['views'] = request.form['views']
-    return redirect('/display')
-
-# @app.route('/display')
-# def counter():
-#     return render_template('index_display.html')
-
 @app.route('/destroy_session')
-def destroy():
+def destroy_session():
+    session.clear()
     return redirect('/')
 
 if __name__=="__main__":   # Ensure this file is being run directly and not from a different module    
