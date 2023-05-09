@@ -29,16 +29,14 @@ const expected3 = {};
  *    from the given arr and the values are the amnt of times that item occurs.
  */
 function makeFrequencyTable(arr) { 
-    let freq = []
-    for(let i=0; i < arr.length; i++){
-        if(arr[i] != freq){
-            freq.push(arr[i])
+    var occurances = {};
+    for(var i=0;i<arr.length;i++){
+        if(occurances.hasOwnProperty(arr[i])){
+            occurances[arr[i]]++;
+        }else{
+            occurances[arr[i]]=1;
         }
-        else {
-            arr[i]++
-        }
-    }
-    return freq
+    }return occurances;
 }
 
 
