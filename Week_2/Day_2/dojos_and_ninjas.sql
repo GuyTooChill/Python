@@ -67,6 +67,10 @@ from ninjas
 join dojos on ninjas.id = 6;
 
 select *
+from ninjas
+join dojos on dojos_id = ninjas.dojos_id;
+
+select *
 from dojos;
 
 select *
