@@ -1,5 +1,30 @@
-from flask_app import app
-from flask_app.controllers import users_controller
+from flask import Flask, render_template, request, redirect
+from mysqlconnection import connectToMySQL
+
+app = Flask(__name__)    
+
+# -----------------------------------------------------------
+@app.route('/')         
+def read_users():
+    return render_template ("read.html")
+
+
+@app.route('/create')         
+def create_users():
+    return render_template ("create.html")
+
+@app.route('/submit')         
+def submit_users():
+    return redirect ("/")
+
+
+
+# -------------------------------------------------------------
+class User:
+    def __init__(self) -> None:
+        pass
+
+
 
 
 
