@@ -23,5 +23,40 @@ def submit_users():
 
 
 
+@app.route('/show/<int:id>')         
+def show_users(id):
+    user_data = {'id' : id}
+    one_user = User.one_user(user_data)
+    return render_template ("show.html", one_user = one_user)
+
+
+
+@app.route('/edit/<int:id>')         
+def edit_users(id):
+    user_data = {'id' : id}
+    one_user = User.one_user(user_data)
+    return render_template ("edit.html", one_user = one_user)
+
+@app.route('/change/<int:id>', methods = ['post'])         
+def change_users(id):
+    user_data = {
+        "id" : id,
+        "first_name" : request.form['first_name'],
+        "last_name" : request.form['last_name'],
+        "email" : request.form['email']
+    }
+    User.change_user(user_data)
+    return redirect (f"/show/{id}" )
+
+
+
+@app.route('/delete/<int:id>')         
+def delete_users(id):
+    user_data = {'id' : id}
+    User.delete_user(user_data)
+    return redirect ("/")
+
+
+
 if __name__=="__main__":    
     app.run(debug=True)    

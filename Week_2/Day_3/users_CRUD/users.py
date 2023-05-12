@@ -31,3 +31,31 @@ class User:
         for users in result:
             all_users.append(cls(users))
         return all_users
+    
+    @classmethod
+    def one_user(cls, data):
+        query = """
+        select * from users
+        where id = %(id)s;
+        """
+        result = connectToMySQL(cls.DB).query_db(query, data)
+        return cls(result[0])
+    
+    @classmethod
+    def change_user(cls, data):
+        query = """
+        update users
+        set first_name = %(first_name)s, last_name = %(last_name)s, email = %(email)s
+        where id = %(id)s;
+        """
+        result = connectToMySQL(cls.DB).query_db(query, data)
+        return result
+    
+    @classmethod
+    def delete_user(cls, data):
+        query = """
+        delete from users
+        where id = %(id)s;
+        """
+        result = connectToMySQL(cls.DB).query_db(query, data)
+        return result
