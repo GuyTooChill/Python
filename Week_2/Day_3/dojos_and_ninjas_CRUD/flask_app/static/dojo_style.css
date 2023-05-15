@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 15px;
+}
+
+.submit {
+    margin-top: 15px;
+}
+
+form {
+    margin-top: 15px;
+}
+
+.box {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+ul {
+    border-style: solid;
+    padding: 5px;
+}
