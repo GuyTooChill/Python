@@ -10,15 +10,14 @@
 </head>
 
 
-
 <body>
     <div class="container">
 
         <div class="new">
             <h1>New Dojo</h1>
-            <form action="">
-                <label for="Name">Name : </label>
-                <input type="text">
+            <form action="/create" method="post">
+                <label for="name">Name : </label>
+                <input type="text" name="name">
                 <div class="submit">
                     <input type="submit" value="Create">
                 </div>
@@ -29,16 +28,14 @@
             <h1>All Dojos</h1>
             <div class="box">
                 <ul>
-                    <p>Placeholder</p>
-                    <p>Placeholder</p>
-                    <p>Placeholder</p>
+                    {% for dojo in all_dojos %}
+                    <p>Dojo : {{all_dojos.name}}</p>
+                    {% endfor %}
                 </ul>
             </div>
             <a href="/ninjas">Add Ninja</a>
         </div>
     </div>
-
-
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>

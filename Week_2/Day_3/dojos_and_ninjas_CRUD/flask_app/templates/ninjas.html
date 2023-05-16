@@ -14,33 +14,38 @@
 <body>
     
     <h1>New Ninja</h1>
-    <form action="">
+    <form action="/create_ninja" method="post">
         <div class="left">
             <div>
-                <label for="">Dojo : </label>
+                <label for="dojos_id">Dojo : </label>
             </div>
             <div>
-                <label for="">First Name : </label>
+                <label for="first_name">First Name : </label>
             </div>
             <div>
-                <label for="">Last Name : </label>
+                <label for="last_name">Last Name : </label>
             </div>
             <div>
-                <label for="">Age : </label>
+                <label for="age">Age : </label>
             </div>
         </div>
         <div class="right">
             <div>
-                <input type="text">
+                <input type="number" name="dojos_id">
+                <!-- <select name="dojos_id">
+                    {%for dojo in dojos%}
+                        <option value="">{{all_dojos.name}}</option>
+                    {%endfor%}
+                </select> -->
             </div>
             <div>
-                <input type="text">
+                <input type="text" name="first_name">
             </div>
             <div>
-                <input type="text">
+                <input type="text" name="last_name">
             </div>
             <div>
-                <input type="number">
+                <input type="number" name="age">
             </div>
             <input type="submit" value="Create">
         </div>

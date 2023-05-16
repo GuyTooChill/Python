@@ -10,3 +10,11 @@ form{
 .left {
     margin-right: 15px;
 }
+
+label {
+    margin-bottom: 15px;
+}
+
+input {
+    margin-bottom: 15px;
+}
