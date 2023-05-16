@@ -28,8 +28,8 @@
             <h1>All Dojos</h1>
             <div class="box">
                 <ul>
-                    {% for dojo in all_dojos %}
-                    <p>Dojo : {{all_dojos.name}}</p>
+                    {% for dojo in dojos %}
+                    <p><a href="/view/{{dojo.id}}">{{dojo.name}}</p></a>
                     {% endfor %}
                 </ul>
             </div>

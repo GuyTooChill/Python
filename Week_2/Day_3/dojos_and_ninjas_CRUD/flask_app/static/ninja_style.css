@@ -18,3 +18,7 @@ label {
 input {
     margin-bottom: 15px;
 }
+
+select {
+    margin-bottom: 15px;
+}

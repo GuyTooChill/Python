@@ -31,12 +31,11 @@
         </div>
         <div class="right">
             <div>
-                <input type="number" name="dojos_id">
-                <!-- <select name="dojos_id">
+                <select name="dojo_id">
                     {%for dojo in dojos%}
-                        <option value="">{{all_dojos.name}}</option>
+                    <option value="{{dojo.id}}">{{dojo.name}}</option>
                     {%endfor%}
-                </select> -->
+                </select>
             </div>
             <div>
                 <input type="text" name="first_name">
