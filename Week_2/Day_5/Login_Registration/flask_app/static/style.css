@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 15px;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input {
+    margin-bottom: 15px;
+}
+
+.register {
+    background-color: slategray;
+    padding: 15px;
+}
+
+.login {
+    background-color: slategray;
+    padding: 15px;
+}
+
